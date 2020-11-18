@@ -7,7 +7,7 @@ const ProductEdit = () => {
       <PinchZoomPan
         zoomButtons={false}
         minScale={0}
-        position={center}
+        position="center"
         initialScale={1}
       >
         <img alt="Test Image" src="http://picsum.photos/750/750" />
