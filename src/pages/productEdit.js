@@ -3,8 +3,13 @@ import PinchZoomPan from "react-responsive-pinch-zoom-pan";
 
 const ProductEdit = () => {
   return (
-    <div style={{ width: "500px", height: "500px" }}>
-      <PinchZoomPan zoomButtons={false}>
+    <div style={{ width: "1000px", height: "1000px" }}>
+      <PinchZoomPan
+        zoomButtons={false}
+        minScale={0}
+        position={center}
+        initialScale={1}
+      >
         <img alt="Test Image" src="http://picsum.photos/750/750" />
       </PinchZoomPan>
     </div>
