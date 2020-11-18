@@ -1,12 +1,23 @@
-import React from "react";
-import PinchZoomPan from "react-responsive-pinch-zoom-pan";
+import React, { useState } from "react";
+import Draggable from "react-draggable";
+import styles from "./css/productedit.module.scss";
+import Slider from "react-input-slider";
 
 const ProductEdit = () => {
+  let [imageWidth, setWidth] = useState(0);
   return (
-    <div style={{ width: "1000px", height: "1000px" }}>
-      <PinchZoomPan zoomButtons={false} position="center">
-        <img alt="Test Image" src="http://picsum.photos/750/750" />
-      </PinchZoomPan>
+    <div className={styles.mainContainer}>
+      <div className={styles.main}>
+        <Draggable bounds="parent">
+          <img alt="tee" src="http://picsum.photos/100" width={imageWidth} />
+        </Draggable>
+      </div>
+      <Slider
+        axis="x"
+        xmax="400"
+        x={imageWidth}
+        onChange={({ x }) => setWidth(x)}
+      />
     </div>
   );
 };
