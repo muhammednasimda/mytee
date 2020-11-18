@@ -9,7 +9,7 @@ const Product = ({ productList }) => {
   };
   const productDivList = productList.map((product) => {
     return (
-      <Link to="/productedit">
+      <Link to="/productedit" className={styles.link}>
         <div
           className={`${styles["product-card"]} ${
             selectedProduct === product.id ? styles.active : ""

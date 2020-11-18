@@ -1,19 +1,12 @@
 import React from "react";
-import { TransformWrapper, TransformComponent } from "react-zoom-pan-pinch";
+import PinchZoomPan from "react-responsive-pinch-zoom-pan";
 
 const ProductEdit = () => {
   return (
-    <div>
-      <TransformWrapper>
-        <TransformComponent>
-          <img
-            src="https://naver.github.io/egjs-infinitegrid/assets/image/1.jpg"
-            id="target"
-            alt="edit"
-            width="200"
-          />
-        </TransformComponent>
-      </TransformWrapper>
+    <div style={{ width: "500px", height: "500px" }}>
+      <PinchZoomPan zoomButtons={false}>
+        <img alt="Test Image" src="http://picsum.photos/750/750" />
+      </PinchZoomPan>
     </div>
   );
 };
