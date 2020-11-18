@@ -9,19 +9,18 @@ const Product = ({ productList }) => {
   };
   const productDivList = productList.map((product) => {
     return (
-      <Link to="/productedit" className={styles.link}>
-        <div
-          className={`${styles["product-card"]} ${
-            selectedProduct === product.id ? styles.active : ""
-          }`}
-          key={product.id}
-          onClick={() => {
-            selectProduct(product.id);
-          }}
-        >
-          <img src={product.productImage} alt="product" />
-          <h4>{product.productName}</h4>
-        </div>
+      <Link
+        to="/productedit"
+        className={`${styles["product-card"]} ${
+          selectedProduct === product.id ? styles.active : ""
+        }`}
+        key={product.id}
+        onClick={() => {
+          selectProduct(product.id);
+        }}
+      >
+        <img src={product.productImage} alt="product" />
+        <h4>{product.productName}</h4>
       </Link>
     );
   });
