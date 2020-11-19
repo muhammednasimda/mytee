@@ -1,13 +1,32 @@
 .mainContainer {
+  width: 100vw;
+  overflow: hidden;
+}
+.dragContainer {
+  width: 100vw;
+  background-color: yellowgreen;
+  height: 80vh;
+}
+.editContainer {
+  background-color: hotpink;
+  height: 80vh;
+  position: relative;
+  margin-bottom: 10px;
   display: flex;
-  flex-direction: column;
-  margin: 40px;
+  justify-content: center;
 }
 
-.main {
-  position: relative;
-  width: 80vw;
-  height: 50vh;
-  background-color: hotpink;
-  margin-bottom: 100px;
+.mockupImage {
+  height: 70vh;
+  position: absolute;
+  top: 0;
+  margin: 30px;
+  pointer-events: none;
+}
+.controlsContainer {
+  background-color: lightcoral;
+  padding: 10px;
+}
+.customImage {
+  overflow: unset;
 }
